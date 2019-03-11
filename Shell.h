@@ -25,7 +25,7 @@ namespace
 #include <netdb.h>
 
 #ifndef INVALID_SOCKET
-#define INVALID_SOCKET -1;
+#define INVALID_SOCKET -1
 #endif
 
 
