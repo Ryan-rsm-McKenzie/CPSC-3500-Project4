@@ -44,9 +44,10 @@ namespace
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netdb.h>
+#include <unistd.h>
 
 #ifndef
-#define INVALID_SOCKET -1;
+#define INVALID_SOCKET -1
 #endif
 
 
