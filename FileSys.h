@@ -5,6 +5,7 @@
 #define FILESYS_H
 
 
+#include <iostream>  // cerr
 #include <sstream>  // stringstream
 #include <type_traits>  // remove_reference
 #include <utility>  // pair
@@ -26,6 +27,10 @@ namespace
 {
 	using socket_t = int;
 }
+
+#ifndef INVALID_SOCKET
+#define INVALID_SOCKET -1;
+#endif
 #endif
 
 
