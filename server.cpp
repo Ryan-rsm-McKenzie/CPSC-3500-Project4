@@ -46,7 +46,7 @@ namespace
 #include <netdb.h>
 #include <unistd.h>
 
-#ifndef
+#ifndef INVALID_SOCKET
 #define INVALID_SOCKET -1
 #endif
 
