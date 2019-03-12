@@ -1,8 +1,8 @@
 //// Each team member's name and contributions ////////////
-Team member #1: xxx
-Contributions:
+Team member #1: Ryan McKenzie
+Contributions: Everything
 
-Team member #2: xxx
+Team member #2: N/A
 Contributions:
 
 ...
@@ -12,7 +12,9 @@ Contributions:
 
 //// My own rating on the functionality ///////////////////
 Rating: A, B, C, D, or F?
-Explanation: 
+Explanation: B: I tried my best to construct the classes in a manner that's decoupled
+from implementation specifics, while also providing a flexible interface that can be extended
+to include new commands.
 ...
 
 
@@ -20,9 +22,110 @@ Explanation:
 
 //// Test cases ///////////////////////////////////////////
 Test case #1: mkdir abc
+Results:
+<none>
+
+Test case #2: ls
+Results:
+abc/
+
+Test case #3: cd abc
+Results:
+<none>
+
+Test case #4: create 123
+Results:
+<none>
+
+Test case #5: append 123 sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+(127 chars, leaving 1 byte free in first block)
 Results: 
+<none>
 
+Test case #6: stat 123
+Results:
+iNode block: 3
+Bytes in files: 127
+Number of blocks: 2
+First block: 4
 
-Test case #2: 
+Test case #7: append 123 ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+(130 chars, the intention is to see how the allocator performs across block boundaries)
+Results:
+<none> 
 
+Test case #8: stat 123
+Results:
+iNode block: 3
+Bytes in files: 257
+Number of blocks: 4
+First block: 4
+
+Test case #9: rm do
+Results:
+File does not exist!
+
+Test case #10: append re mi
+Results:
+File does not exist!
+
+Test case #11: cd fa
+Results:
+File does not exist!
+
+Test case #12: home
+Results:
+<none>
+
+Test case #13: rm abc
+Results:
+File is a directory!
+
+Test case #14: create sol
+Results:
+<none>
+
+Test case #15: ls
+Results:
+abc/
+sol
+
+Test case #16: rmdir abc
+Results:
+Directory is not empty!
+
+Test case #17: append sol doremi
+Results:
+<none>
+
+Test case #18: head sol 2
+Results:
+do
+
+Test case #19: stat abc
+Results:
+Directory name: abc/
+Directory block: 2
+
+Test case #20: mkdir foo
+Results:
+<none>
+
+Test case #21: ls
+Results:
+abc/
+sol
+foo/
+
+Test case #22: rmdir foo
+Results:
+<none>
+
+Test case #23: rm sol
+Results:
+<none>
+
+Test case #24: ls
+Results:
+abc/
 ...

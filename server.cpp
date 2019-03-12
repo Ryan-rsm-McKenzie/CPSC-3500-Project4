@@ -82,6 +82,7 @@ public:
 	CommandParser() = delete;
 
 
+	// takes ownership of the passed socket
 	explicit CommandParser(socket_t a_sock)
 	{
 		_fs.mount(a_sock);

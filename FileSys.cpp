@@ -62,7 +62,7 @@ FileSys::FileSys() :
 
 
 // mounts the file system
-void FileSys::mount(int a_sock)
+void FileSys::mount(socket_t a_sock)
 {
 	_bfs.mount();
 	_curDirHandle = kRootDirHandle; //by default current directory is home directory, in disk block #1

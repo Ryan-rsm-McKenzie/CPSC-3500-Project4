@@ -56,7 +56,7 @@ public:
 	FileSys();
 
 	// mounts the file system
-	void mount(int a_sock);
+	void mount(socket_t a_sock);
 
 	// unmounts the file system
 	void unmount();
